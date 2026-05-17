@@ -11,7 +11,7 @@ WHERE ProductID LIKE 2 OR ProductID LIKE 3;
 SELECT ProductInStock,COUNT(*) AS BrojProdukti
 FROM Product
 GROUP BY ProductInStock
-HAVING ProductInStock>1;
+HAVING ProductInStock>=30;
 
 SELECT *
 From Product
