@@ -97,3 +97,17 @@ ON s.id=p.SupplierID
 WHERE s.CompanyName LIKE 'TechnoLogika'
 GROUP BY s.CompanyName;
 
+SELECT o.ProductID,o.OrderDate,e.EmpFirstName,e.EmpLastName
+FROM orders o INNER JOIN employees e
+ON o.EmployeeID=e.id;
+
+SELECT e.EmpFirstName,e.EmpLastName,o.OrderDate,o.quantity,p.ProductName,p.Productprice
+FROM employees e JOIN orders o ON e.id=o.EmployeeID JOIN products p ON o.ProductID=p.id;
+
+DELETE FROM orders
+WHERE EmployeeID = 2
+AND ProductID = 4
+AND OrderDate = '2025-05-17 21:30:00';
+
+SELECT *
+FROM orders;
